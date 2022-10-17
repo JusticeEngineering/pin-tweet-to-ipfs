@@ -2,7 +2,8 @@
   "manifest_version": 3,
   "name": "pin-tweet-to-ipfs",
   "description": "Pin tweets to ipfs",
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "storage"],
+  "host_permissions": ["http://*/*", "https://*/*", "<all_urls>"],
   "options_page": "options.html",
   "background": { "service_worker": "background.bundle.js" },
   "action": {
@@ -14,7 +15,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*", "<all_urls>"],
+      "matches": [
+        "https://*.twitter.com/*",
+        "https://*.express.archiveweb.page/*"
+      ],
       "js": ["contentScript.bundle.js"],
       "css": ["content.styles.css"]
     }
