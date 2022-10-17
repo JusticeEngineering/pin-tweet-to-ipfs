@@ -5,13 +5,22 @@ observer.observe(document, {
 });
 
 function onMutation(mutations) {
-  const getTweetUrl = (e) => {
-    const selectedTweet = e.target.closest("article");
-    const tweetUrl = selectedTweet.querySelector(
-      '[data-testid="User-Names"] [role="link"][dir="auto"]'
-    )?.href;
+  const currentUrl = window.location.href;
+  const isTweetPage = currentUrl.includes("status");
 
-    console.log("tweetUrl: ", tweetUrl);
+  const getTweetUrl = (e) => {
+    let tweetUrl;
+
+    if (isTweetPage) {
+      tweetUrl = currentUrl;
+    } else {
+      const selectedTweet = e.target.closest("article");
+      tweetUrl = selectedTweet.querySelector(
+        '[data-testid="User-Names"] [role="link"][dir="auto"]'
+      )?.href;
+    }
+
+    chrome.runtime.sendMessage({ url: tweetUrl });
   };
 
   const pinTweetButton = document.createElement("button");
@@ -26,7 +35,9 @@ function onMutation(mutations) {
       if (node.firstElementChild) {
         found.push(
           ...node.getElementsByClassName(
-            "css-1dbjc4n r-1ta3fxp r-18u37iz r-1wtj0ep r-1s2bzr4 r-1mdbhws"
+            isTweetPage
+              ? "css-1dbjc4n r-1oszu61 r-j5o65s r-rull8r r-qklmqi r-1dgieki r-1efd50x r-5kkj8d r-1ta3fxp r-18u37iz r-h3s6tt r-a2tzq0 r-3qxfft r-s1qlax"
+              : "css-1dbjc4n r-1ta3fxp r-18u37iz r-1wtj0ep r-1s2bzr4 r-1mdbhws"
           )
         );
       }
@@ -34,7 +45,6 @@ function onMutation(mutations) {
   }
 
   found.forEach((n) => {
-    n.style.background = "#808080";
     n.append(pinTweetButton);
   });
 }
