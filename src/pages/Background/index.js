@@ -29,8 +29,8 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
             waitForElm(
               "body > live-web-proxy > sl-form > div.flex.flex-wrap.mt-2 > sl-radio-group:nth-child(4)"
             ).then(() => {
-              chrome.storage.local.get(["storageKey"], function (res) {
-                if (res.storageKey) {
+              chrome.storage.local.get(["web3storageKey"], function (res) {
+                if (res.web3storageKey) {
                   document
                     .querySelector(
                       "body > live-web-proxy > sl-form > div.flex.flex-wrap.mt-2 > sl-radio-group:nth-child(4) > details > summary"
@@ -39,7 +39,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 
                   document
                     .querySelector("#apikey")
-                    .setAttribute("value", res.storageKey);
+                    .setAttribute("value", res.web3storageKey);
 
                   document
                     .querySelector(

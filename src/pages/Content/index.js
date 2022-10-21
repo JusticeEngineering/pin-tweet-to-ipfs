@@ -23,28 +23,51 @@ function onMutation(mutations) {
     chrome.runtime.sendMessage({ url: tweetUrl });
   };
 
-  const pinTweetButton = document.createElement("button");
-  pinTweetButton.innerHTML = "PinTweetIPFS";
-  pinTweetButton.addEventListener("click", (e) => getTweetUrl(e));
+  const createButton = () => {
+    const pinTweetButton = document.createElement("button");
+    pinTweetButton.innerHTML = "PinTweetIPFS";
+    pinTweetButton.style.backgroundColor = "#1d9cf0";
+    pinTweetButton.style.color = "#fff";
+    pinTweetButton.style.border = "none";
+    pinTweetButton.style.borderRadius = "4px";
+    pinTweetButton.style.margin = "5px";
+    pinTweetButton.style.letterSpacing = "0.5px";
+    pinTweetButton.style.padding = "5px 10px";
+    pinTweetButton.style.cursor = "pointer";
+    pinTweetButton.addEventListener("click", (e) => getTweetUrl(e));
+    return pinTweetButton;
+  };
 
   const found = [];
   for (const { addedNodes } of mutations) {
     for (const node of addedNodes) {
       if (!node.tagName) continue; // not an element
 
-      if (node.firstElementChild) {
-        found.push(
-          ...node.getElementsByClassName(
-            isTweetPage
-              ? "css-1dbjc4n r-1oszu61 r-j5o65s r-rull8r r-qklmqi r-1dgieki r-1efd50x r-5kkj8d r-1ta3fxp r-18u37iz r-h3s6tt r-a2tzq0 r-3qxfft r-s1qlax"
-              : "css-1dbjc4n r-1ta3fxp r-18u37iz r-1wtj0ep r-1s2bzr4 r-1mdbhws"
+      if (isTweetPage) {
+        [].slice
+          .apply(node.querySelectorAll("[role='group']"))
+          .filter(
+            (node) =>
+              !node.hasAttribute("aria-label") &&
+              node.id &&
+              !found.includes(node)
           )
-        );
+          .forEach((node) => found.push(node));
+      } else {
+        [].slice
+          .apply(node.querySelectorAll("[aria-label]"))
+          .filter(
+            (node) =>
+              node.ariaLabel.includes("eplies") &&
+              node.id &&
+              !found.includes(node)
+          )
+          .forEach((node) => found.push(node));
       }
     }
   }
 
   found.forEach((n) => {
-    n.append(pinTweetButton);
+    n.appendChild(createButton());
   });
 }

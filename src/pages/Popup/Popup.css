@@ -1,20 +1,79 @@
-.App {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  text-align: center;
+.container {
+  width: 500px;
+  height: 350px;
+  padding: 20px;
+}
+
+.container .header {
+  display: flex;
+  gap: 30px;
+}
+
+.container .header p {
+  width: 80%;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  justify-content: center;
+  margin: 0 auto;
   height: 100%;
-  padding: 10px;
-  background-color: #282c34;
 }
 
-.App p {
-  color: #fff;
+.container label {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
-.App button {
+.container input {
   display: block;
-  margin: 20px auto 0;
+  margin-bottom: 20px;
+  border: 1px solid #d3d3d3;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.container button {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  background-color: #1d9cf0;
+  border: none;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #1c75b0;
+}
+
+.loader {
+  border: 3px solid #f3f3f3; /* Light grey */
+  border-top: 3px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
 }
