@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg.url) {
     chrome.tabs.create(
-      { url: `https://express.archiveweb.page/#${msg.url}` },
+      { url: `https://express.archiveweb.page/#https://oembed.link/${msg.url}` },
       (createdTab) => {
         chrome.scripting.executeScript({
           target: { tabId: createdTab.id },
