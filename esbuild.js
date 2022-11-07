@@ -1,3 +1,6 @@
+/* eslint-disable */
+// https://github.com/eslint/eslint/discussions/15305
+
 import fs from "fs";
 import cpy from "cpy";
 import { deleteSync } from "del";
