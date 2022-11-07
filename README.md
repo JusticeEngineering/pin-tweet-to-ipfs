@@ -9,7 +9,7 @@
 
 <a href="https://chrome.google.com/webstore/detail/pin-tweet-to-ipfs/bkbejdaeamaehgpodkjdbkhkofpijagn"><img src="https://user-images.githubusercontent.com/585534/107280622-91a8ea80-6a26-11eb-8d07-77c548b28665.png" alt="Get Pin Tweet to IPFS for Chromium"></a>
 
-[Firefox support](https://github.com/meandavejustice/pin-tweet-to-ipfs/issues/6)
+[Firefox support coming soon](https://github.com/meandavejustice/pin-tweet-to-ipfs/issues/6)
 
 ## Features
 
