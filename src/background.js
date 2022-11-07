@@ -1,13 +1,15 @@
-chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((msg) => {
   if (msg.url) {
     chrome.tabs.create(
-      { url: `https://express.archiveweb.page/#https://oembed.link/${msg.url}` },
+      {
+        url: `https://express.archiveweb.page/#https://oembed.link/${msg.url}`,
+      },
       (createdTab) => {
         chrome.scripting.executeScript({
           target: { tabId: createdTab.id },
           func: async () => {
             async function waitForElement(selector) {
-              return new Promise(resolve => {
+              return new Promise((resolve) => {
                 const elInterval = setInterval(() => {
                   const elem = document.querySelector(selector);
                   if (elem) {
@@ -18,13 +20,15 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
               });
             }
 
-            async function fileHasLoaded () {
-              const sizeElem = await waitForElement('body > live-web-proxy sl-format-bytes')
-              const size = parseInt(sizeElem.getAttribute('value'), 10)
+            async function fileHasLoaded() {
+              const sizeElem = await waitForElement(
+                "body > live-web-proxy sl-format-bytes"
+              );
+              const size = parseInt(sizeElem.getAttribute("value"), 10);
               if (!size) {
                 return false;
               }
-              return size > 1000000 // one mb
+              return size > 1000000; // one mb
             }
 
             const asyncInterval = async (callback, ms, triesLeft = 25) => {
@@ -40,12 +44,14 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
                   triesLeft--;
                 }, ms);
               });
-            }
+            };
 
             await asyncInterval(fileHasLoaded, 500);
             chrome.storage.local.get(["web3storageKey"], function (res) {
               if (res.web3storageKey) {
-                const summaryEl = document.querySelector(`body > live-web-proxy > sl-form > div.flex.flex-wrap.mt-2 > sl-radio-group:nth-child(4) > details > summary`);
+                const summaryEl = document.querySelector(
+                  `body > live-web-proxy > sl-form > div.flex.flex-wrap.mt-2 > sl-radio-group:nth-child(4) > details > summary`
+                );
                 summaryEl.click();
 
                 const inputEl = document.getElementById("apikey");

@@ -34,7 +34,11 @@ const Card: React.FC<CardProps> = ({ storedItems }) => {
             <td>{formatSize(v.dagSize)}MB</td>
             <td>{format(new Date(v.created), "MM/dd/yyyy")}</td>
             <td>
-              <a href={`https://w3s.link/ipfs/${v.cid}`} target="_blank">
+              <a
+                href={`https://w3s.link/ipfs/${v.cid}`}
+                target="_blank"
+                rel="noreferrer"
+              >
                 View
               </a>
             </td>
