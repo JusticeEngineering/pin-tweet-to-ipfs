@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Web3Storage } from "web3.storage";
-import Card from "../../components/Card/Card";
-import "./Popup.css";
+import Card from "../components/Card/Card";
 
 type PinsType = {
   peerId: string;
