@@ -1,6 +1,5 @@
-![](./src/icon-128.png)
 # Pin Tweets to IPFS
-
+![pin tweet to ipfs logo](./src/icon-128.png)
 
 [![GitHub Super-Linter](https://github.com/meandavejustice/pin-tweet-to-ipfs/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
@@ -13,7 +12,7 @@
 
 ## Features
 
-Pin Tweet to IPFS is a [web extension]() targetting less-technical users who wish to archive Tweets in a verifiable way. It uses [IPFS](https://ipfs.tech/), [WebRecorder](https://webrecorder.net/), and [web3.storage](https://web3.storage/) to achieve this.
+Pin Tweet to IPFS is a [web extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) targetting less-technical users who wish to archive Tweets in a verifiable way. It uses [IPFS](https://ipfs.tech/), [WebRecorder](https://webrecorder.net/), and [web3.storage](https://web3.storage/) to achieve this.
 
 
 ## Installing and Running
