@@ -2,6 +2,7 @@
 // https://github.com/eslint/eslint/discussions/15305
 
 import fs from "fs";
+import path, { dirname } from "path";
 import cpy from "cpy";
 import { deleteSync } from "del";
 import esbuild from "esbuild";
@@ -9,7 +10,13 @@ import esbuild from "esbuild";
 import pkg from "./package.json" assert { type: "json" };
 import manifest from "./src/manifest.json" assert { type: "json" };
 
+// delete old contents of build/ if exists
 deleteSync(["build/**"]);
+
+// create build/ if doesn't exist
+if (!fs.existsSync("build")) {
+  fs.mkdirSync("build");
+}
 
 esbuild
   .build({
