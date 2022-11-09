@@ -11,6 +11,8 @@ jobs:
       APP_ID: bkbejdaeamaehgpodkjdbkhkofpijagn
     steps:
       - uses: actions/checkout@v3
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
       - name: install node v19
         uses: actions/setup-node@v3
         with:
