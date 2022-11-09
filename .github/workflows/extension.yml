@@ -1,0 +1,32 @@
+name: "Extension upload"
+on:
+  push:
+    tags:
+      - v*
+jobs:
+  UploadExtension:
+    name: Extension upload
+    runs-on: ubuntu-latest
+    env:
+      APP_ID: bkbejdaeamaehgpodkjdbkhkofpijagn
+    steps:
+      - uses: actions/checkout@v3
+      - name: install node v19
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19
+      - run: npm ci
+      - run: npm run build
+      - run: npm run bundle
+      - uses: actions/upload-artifact@v3
+        with:
+          name: extension
+          path: ./extension.zip
+      - name: Upload extension
+        uses: Klemensas/chrome-extension-upload-action@v1.3
+        with:
+          refresh-token: ${{ secrets.REFRESH_TOKEN }}
+          client-id: ${{ secrets.CLIENT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+          app-id: ${{ env.APP_ID }}
+          file-name: ./extension.zip
