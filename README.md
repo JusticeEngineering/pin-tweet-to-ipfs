@@ -1,8 +1,16 @@
-# Pin Tweets to IPFS
-![pin tweet to ipfs logo](./src/icon-128.png)
+# Pin Tweet to IPFS
 
-[![GitHub Super-Linter](https://github.com/meandavejustice/pin-tweet-to-ipfs/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
-
+<p align="center">
+    <img alt="pin tweet to ipfs" src="./src/icon-128.png"/>
+</p>
+<h1 align="center">
+    Pin Tweet to IPFS
+</h1>
+<p align="center">
+<a href="https://github.com/marketplace/actions/super-linter">
+<img alt="GitHub Super-Linter" src="https://github.com/meandavejustice/pin-tweet-to-ipfs/workflows/Lint%20Code%20Base/badge.svg"/>
+</a>
+</p>
 
 ## Availability
 
