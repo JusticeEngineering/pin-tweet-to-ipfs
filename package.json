@@ -1,6 +1,6 @@
 {
   "name": "pin-tweet-to-ipfs",
-  "version": "4.3.5",
+  "version": "0.1.0",
   "description": "Pin Tweets to IPFS",
   "license": "MIT",
   "repository": {
