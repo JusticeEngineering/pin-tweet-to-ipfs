@@ -30,3 +30,4 @@ jobs:
           client-secret: ${{ secrets.CLIENT_SECRET }}
           app-id: ${{ env.APP_ID }}
           file-name: ./extension.zip
+          publish: true
