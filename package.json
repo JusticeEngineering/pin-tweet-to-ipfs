@@ -10,7 +10,7 @@
   "type": "module",
   "scripts": {
     "build": "node esbuild.js",
-    "bundle": "./bundle.sh",
+    "bundle": "bash ./bundle.sh",
     "lint": "eslint .",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}'"
   },
