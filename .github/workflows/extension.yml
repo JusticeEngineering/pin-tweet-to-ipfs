@@ -1,3 +1,4 @@
+---
 name: "Extension upload"
 on:
   push:
@@ -5,7 +6,7 @@ on:
       - v*
 jobs:
   UploadExtension:
-    name: Extension upload
+    name: Extension upload & publish
     runs-on: ubuntu-latest
     env:
       APP_ID: bkbejdaeamaehgpodkjdbkhkofpijagn
@@ -23,11 +24,17 @@ jobs:
           name: extension
           path: ./extension.zip
       - name: Upload extension
-        uses: Klemensas/chrome-extension-upload-action@v1.3
+        uses: cardinalby/webext-buildtools-chrome-webstore-action@v1
         with:
-          refresh-token: ${{ secrets.REFRESH_TOKEN }}
-          client-id: ${{ secrets.CLIENT_ID }}
-          client-secret: ${{ secrets.CLIENT_SECRET }}
-          app-id: ${{ env.APP_ID }}
-          file-name: ./extension.zip
-          publish: true
+          zipFilePath: './extension.zip'
+          extensionId: ${{ env.APP_ID }}
+          apiClientId: ${{ secrets.CLIENT_ID }}
+          apiClientSecret: ${{ secrets.CLIENT_SECRET }}
+          apiRefreshToken: ${{ secrets.REFRESH_TOKEN }}
+      - name: Publish extension
+        uses: cardinalby/webext-buildtools-chrome-webstore-publish-action@v1
+        with:
+          extensionId: ${{ env.APP_ID }}
+          apiClientId: ${{ secrets.CLIENT_ID }}
+          apiClientSecret: ${{ secrets.CLIENT_SECRET }}
+          apiRefreshToken: ${{ secrets.REFRESH_TOKEN }}
