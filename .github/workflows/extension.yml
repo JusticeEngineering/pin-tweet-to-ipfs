@@ -38,3 +38,11 @@ jobs:
           apiClientId: ${{ secrets.CLIENT_ID }}
           apiClientSecret: ${{ secrets.CLIENT_SECRET }}
           apiRefreshToken: ${{ secrets.REFRESH_TOKEN }}
+      - name: Deploy to Edge Addons
+        uses: wdzeng/edge-addon@v1.0.3
+        with:
+          product-id: ${{ secrets.EDGE_PRODUCT_ID }}
+          zip-path: './extension.zip'
+          client-id: ${{ secrets.EDGE_CLIENT_ID }}
+          client-secret: ${{ secrets.EDGE_CLIENT_SECRET }}
+          access-token-url: ${{ secrets.EDGE_ACCESS_TOKEN_URL }}
