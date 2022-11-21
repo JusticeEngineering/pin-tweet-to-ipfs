@@ -18,6 +18,10 @@
 
 [Firefox support coming soon](https://github.com/meandavejustice/pin-tweet-to-ipfs/issues/6)
 
+<a href="ms-windows-store://pdp/?ProductId=0RDCKDH8ZD6B&mode=mini">
+   <img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Download Pin twee to IPFS" width="250"/>
+</a>
+
 ## Features
 
 Pin Tweet to IPFS is a [web extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) targetting less-technical users who wish to archive Tweets in a verifiable way. It uses [IPFS](https://ipfs.tech/), [WebRecorder](https://webrecorder.net/), and [web3.storage](https://web3.storage/) to achieve this.
