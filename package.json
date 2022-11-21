@@ -28,7 +28,7 @@
     "@typescript-eslint/parser": "5.43.0",
     "cpy": "9.0.1",
     "del": "7.0.0",
-    "esbuild": "0.15.13",
+    "esbuild": "0.15.14",
     "eslint": "8.27.0",
     "eslint-plugin-react": "7.31.10",
     "prettier": "2.7.1",
