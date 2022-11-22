@@ -1,5 +1,4 @@
-# Pin Tweet to IPFS
-
+<!-- markdownlint-disable MD041 -->
 <p align="center">
     <img alt="pin tweet to ipfs" src="./src/icon-128.png"/>
 </p>
