@@ -25,6 +25,14 @@
 
 Pin Tweet to IPFS is a [web extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) targetting less-technical users who wish to archive Tweets in a verifiable way. It uses [IPFS](https://ipfs.tech/), [WebRecorder](https://webrecorder.net/), and [web3.storage](https://web3.storage/) to achieve this.
 
+## How does it work?
+
+We are using tools from the [WebRecorder](https://webrecorder.net/) team to create
+verifiable [WebArChiveZip](https://specs.webrecorder.net/wacz/1.1.1/) files of
+tweets. We then assist the user in uploading these "WACZ" files to the IPFS network
+via [web3.storage](https://web3.storage). Here users can store all of their archived
+tweets in one place, and easily access them via their own IPFS node or other pinning
+services.
 
 ## Installing and Running
 
