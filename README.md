@@ -14,13 +14,12 @@
 
 ## Availability
 
-<a href="https://chrome.google.com/webstore/detail/pin-tweet-to-ipfs/bkbejdaeamaehgpodkjdbkhkofpijagn"><img src="https://user-images.githubusercontent.com/1844554/200466572-07459a2b-f299-4eaf-9d6f-e8e6aa87afe4.png" alt="Get Pin Tweet to IPFS for Chromium"></a>
-
-[Firefox support coming soon](https://github.com/meandavejustice/pin-tweet-to-ipfs/issues/6)
-
+<a href="https://chrome.google.com/webstore/detail/pin-tweet-to-ipfs/bkbejdaeamaehgpodkjdbkhkofpijagn"><img src="https://user-images.githubusercontent.com/1844554/203426246-e65a07bf-718e-4398-94be-9406528d2559.png" alt="Get Pin Tweet to IPFS for Chromium"></a>
 <a href="ms-windows-store://pdp/?ProductId=0RDCKDH8ZD6B&mode=mini">
    <img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Download Pin twee to IPFS" width="250"/>
 </a>
+
+[Firefox support coming soon...](https://github.com/meandavejustice/pin-tweet-to-ipfs/issues/6)
 
 ## Features
 
