@@ -14,7 +14,7 @@
 ## Availability
 
 <a href="https://chrome.google.com/webstore/detail/pin-tweet-to-ipfs/bkbejdaeamaehgpodkjdbkhkofpijagn"><img src="https://user-images.githubusercontent.com/1844554/203426246-e65a07bf-718e-4398-94be-9406528d2559.png" alt="Get Pin Tweet to IPFS for Chromium"></a>
-<a href="ms-windows-store://pdp/?ProductId=0RDCKDH8ZD6B&mode=mini">
+<a href="https://microsoftedge.microsoft.com/addons/detail/pintweettoipfs/gimajpahenimjjgobbjjidlljnapmfgf">
    <img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Download Pin twee to IPFS" width="250"/>
 </a>
 
