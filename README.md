@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 <p align="center">
-    <img alt="pin tweet to ipfs" src="./src/icon-128.png"/>
+    <img alt="pin tweet to ipfs" src="./src/logo.svg" width="250"/>
 </p>
 <h1 align="center">
     Pin Tweet to IPFS
