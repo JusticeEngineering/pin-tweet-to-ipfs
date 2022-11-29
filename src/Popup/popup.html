@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
-
-    <script defer="defer" src="index.js"></script>
-
+    <title>Pin Tweet to IPFS</title>
     <style>
       body {
         margin: 0;
@@ -109,6 +106,13 @@
       }
       td {
         background-color: #eee;
+
+        /* ellipsis rules */
+        background-color: #eee;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 140px;
       }
       th {
         background-color: #1d9cf0;
@@ -119,10 +123,34 @@
         padding: 0.25em 0.5em;
         text-align: left;
       }
+
+      a.button {
+        display: inline;
+        outline: none;
+        cursor: pointer;
+        border-radius: 2px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        padding: 2px 8px;
+        height: 30px;
+        min-width: 60px;
+        min-height: 32px;
+        border: none;
+        color: #fff;
+        background-color: #1d9cf0;
+        transition: background-color .17s ease,color .17s ease;
+        margin-left: 7px;
+      }
+
+      a.button:hover {
+        background-color: #1c75b0;
+      }
     </style>
   </head>
 
   <body>
+    <script defer="defer" src="index.js"></script>
     <div id="app-container"></div>
   </body>
 </html>
