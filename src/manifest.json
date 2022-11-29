@@ -16,7 +16,7 @@
     {
       "matches": [
         "https://*.twitter.com/*",
-        "https://*.express.archiveweb.page/*"
+        "https://webrecorder.github.io/save-tweet-now/"
       ],
       "js": ["content.js"]
     }

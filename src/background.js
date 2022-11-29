@@ -1,66 +1,48 @@
+/* global chrome */
 chrome.runtime.onMessage.addListener((msg) => {
   if (msg.url) {
     chrome.tabs.create(
       {
-        url: `https://express.archiveweb.page/#https://oembed.link/${msg.url}`,
+        url: `https://webrecorder.github.io/save-tweet-now/#url=${msg.url}&autoupload=1`
       },
       (createdTab) => {
         chrome.scripting.executeScript({
           target: { tabId: createdTab.id },
           func: async () => {
-            async function waitForElement(selector) {
+            async function waitForElement (selector) {
               return new Promise((resolve) => {
                 const elInterval = setInterval(() => {
-                  const elem = document.querySelector(selector);
+                  const elem = document.querySelector(selector)
                   if (elem) {
-                    clearInterval(elInterval);
-                    resolve(elem);
+                    clearInterval(elInterval)
+                    resolve(elem)
                   }
-                }, 100);
-              });
+                }, 100)
+              })
             }
 
-            async function fileHasLoaded() {
-              const sizeElem = await waitForElement(
-                "body > live-web-proxy sl-format-bytes"
-              );
-              const size = parseInt(sizeElem.getAttribute("value"), 10);
-              if (!size) {
-                return false;
-              }
-              return size > 1000000; // one mb
+            const w3sLinkEl = await waitForElement('.panel a')
+            const gatewayUrl = w3sLinkEl.href
+            const size = 12345678 // TODO: PLACEHOLDER< NEED TO REPLACE THIS
+
+            const cidRegexp =
+              /Qm[1-9A-HJ-NP-Za-km-z]{44,}|b[A-Za-z2-7]{58,}|B[A-Z2-7]{58,}|z[1-9A-HJ-NP-Za-km-z]{48,}|F[0-9A-F]{50,}/
+
+            const cid = gatewayUrl.match(cidRegexp)[0]
+            const listing = {}
+            const created = new Date().toISOString()
+            listing[cid] = {
+              title: `Archived Tweet ${created}`,
+              created,
+              size,
+              cid
             }
-
-            const asyncInterval = async (callback, ms, triesLeft = 25) => {
-              return new Promise((resolve, reject) => {
-                const interval = setInterval(async () => {
-                  if (await callback()) {
-                    resolve();
-                    clearInterval(interval);
-                  } else if (triesLeft <= 1) {
-                    reject();
-                    clearInterval(interval);
-                  }
-                  triesLeft--;
-                }, ms);
-              });
-            };
-
-            await asyncInterval(fileHasLoaded, 500);
-            chrome.storage.local.get(["web3storageKey"], function (res) {
-              if (res.web3storageKey) {
-                const summaryEl = document.querySelector(
-                  `body > live-web-proxy > sl-form > div.flex.flex-wrap.mt-2 > sl-radio-group:nth-child(4) > details > summary`
-                );
-                summaryEl.click();
-
-                const inputEl = document.getElementById("apikey");
-                inputEl.setAttribute("value", res.web3storageKey);
-              }
-            });
-          },
-        });
+            chrome.storage.sync.set(listing, () => {
+              console.log('Tweet saved in extension storage, ', listing)
+            })
+          }
+        })
       }
-    );
+    )
   }
-});
+})

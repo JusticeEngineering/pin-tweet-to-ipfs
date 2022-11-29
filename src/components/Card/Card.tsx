@@ -1,14 +1,13 @@
 import React from "react";
-import { format } from "date-fns";
-import "./Card.css";
+import copyTextToClipboard from "../../copy-text-to-clipboard";
 
 type CardProps = {
   storedItems: StorageType[];
 };
 
-type StorageType = {
-  name: string;
-  dagSize: number;
+export type StorageType = {
+  title: string;
+  size: number;
   created: string;
   cid: string;
 };
@@ -21,18 +20,20 @@ const Card: React.FC<CardProps> = ({ storedItems }) => {
     <table>
       <thead>
         <tr>
-          <th>Name</th>
+          <th>Title</th>
           <th>Size</th>
           <th>Date</th>
-          <th> </th>
+          <th>Share</th>
         </tr>
       </thead>
       <tbody>
         {storedItems?.map((v, i) => (
-          <tr key={`${v.name}-${i}`}>
-            <td>{v.name}</td>
-            <td>{formatSize(v.dagSize)}MB</td>
-            <td>{format(new Date(v.created), "MM/dd/yyyy")}</td>
+          <tr key={`${v.title}-${i}`}>
+            <td>{v.title}</td>
+            <td>{formatSize(v.size)}MB</td>
+            <td title={new Date(v.created).toString()}>
+              {new Date(v.created).toString()}
+            </td>
             <td>
               <a
                 href={`https://w3s.link/ipfs/${v.cid}`}
@@ -40,6 +41,14 @@ const Card: React.FC<CardProps> = ({ storedItems }) => {
                 rel="noreferrer"
               >
                 View
+              </a>
+              <a
+                className="button"
+                onClick={() => {
+                  copyTextToClipboard(`https://w3s.link/ipfs/${v.cid}`);
+                }}
+              >
+                Copy
               </a>
             </td>
           </tr>
