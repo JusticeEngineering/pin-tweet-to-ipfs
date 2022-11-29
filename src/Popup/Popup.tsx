@@ -8,17 +8,17 @@ const Popup: React.FC = () => {
 
   const populateStoredItems = async () => {
     setIsInitRun(false);
-    setIsLoading(true)
-    const result = await chrome.storage.sync.get(null)
-    setStoredItems(Object.values(result))
-    setIsLoading(false)
+    setIsLoading(true);
+    const result = await chrome.storage.sync.get(null);
+    setStoredItems(Object.values(result));
+    setIsLoading(false);
   };
 
   if (isInitRun) populateStoredItems();
 
   return (
     <div className="container">
-      {(
+      {
         <div>
           <div className="header">
             <h2>
@@ -35,7 +35,7 @@ const Popup: React.FC = () => {
             )}
           </div>
         </div>
-      )}
+      }
     </div>
   );
 };

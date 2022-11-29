@@ -12,7 +12,6 @@ export type StorageType = {
   cid: string;
 };
 
-
 const Card: React.FC<CardProps> = ({ storedItems }) => {
   const formatSize = (sizeInBytes: number) =>
     (sizeInBytes / (1024 * 1024)).toFixed(2);
@@ -32,7 +31,9 @@ const Card: React.FC<CardProps> = ({ storedItems }) => {
           <tr key={`${v.title}-${i}`}>
             <td>{v.title}</td>
             <td>{formatSize(v.size)}MB</td>
-            <td title={new Date(v.created).toString()}>{new Date(v.created).toString()}</td>
+            <td title={new Date(v.created).toString()}>
+              {new Date(v.created).toString()}
+            </td>
             <td>
               <a
                 href={`https://w3s.link/ipfs/${v.cid}`}
@@ -43,7 +44,7 @@ const Card: React.FC<CardProps> = ({ storedItems }) => {
               </a>
               <a
                 className="button"
-                onClick={()=> {
+                onClick={() => {
                   copyTextToClipboard(`https://w3s.link/ipfs/${v.cid}`);
                 }}
               >
