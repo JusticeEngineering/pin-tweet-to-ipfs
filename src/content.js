@@ -1,4 +1,6 @@
 /* global chrome, MutationObserver */
+import iconLogo from './logo.svg'
+
 const observer = new MutationObserver(onMutation)
 observer.observe(document, {
   childList: true,
@@ -25,9 +27,23 @@ function onMutation (mutations) {
   }
 
   const createButton = () => {
+    // Icon svg
+    const parser = new DOMParser()
+    const logo = parser.parseFromString(iconLogo, 'image/svg+xml')
+    logo.documentElement.setAttribute('width', '18px')
+    logo.documentElement.setAttribute('height', '18px')
+    logo.documentElement.style.marginTop = '3px'
+
+    // Button text label
+    const label = document.createElement('span')
+    label.innerHTML = 'Pin Tweet to IPFS'
+    label.style.padding = '5px'
+
     const pinTweetButton = document.createElement('button')
-    pinTweetButton.innerHTML = 'PinTweetIPFS'
-    pinTweetButton.style.backgroundColor = '#1d9cf0'
+    pinTweetButton.appendChild(pinTweetButton.ownerDocument.importNode(logo.documentElement, true))
+    pinTweetButton.appendChild(label)
+    pinTweetButton.style.display = 'flex'
+    pinTweetButton.style.backgroundColor = 'rgb(104 131 149)'
     pinTweetButton.style.color = '#fff'
     pinTweetButton.style.border = 'none'
     pinTweetButton.style.borderRadius = '4px'
@@ -35,6 +51,7 @@ function onMutation (mutations) {
     pinTweetButton.style.letterSpacing = '0.5px'
     pinTweetButton.style.padding = '5px 10px'
     pinTweetButton.style.cursor = 'pointer'
+    pinTweetButton.style.minWidth = '165px'
     pinTweetButton.addEventListener('click', (e) => getTweetUrl(e))
     return pinTweetButton
   }
