@@ -28,6 +28,7 @@
     "cpy": "9.0.1",
     "del": "7.0.0",
     "esbuild": "0.15.18",
+    "esbuild-plugin-svg": "0.1.0",
     "eslint": "8.29.0",
     "eslint-plugin-react": "7.31.11",
     "typescript": "4.9.3"

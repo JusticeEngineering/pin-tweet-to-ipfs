@@ -2,7 +2,7 @@
 // https://github.com/eslint/eslint/discussions/15305
 
 import fs from "fs";
-import path, { dirname } from "path";
+import svg from 'esbuild-plugin-svg';
 import cpy from "cpy";
 import { deleteSync } from "del";
 import esbuild from "esbuild";
@@ -30,6 +30,7 @@ esbuild
     sourcemap: process.env.NODE_ENV !== "production",
     target: ["chrome100"],
     outdir: "./build",
+    plugins: [svg()],
     define: {
       "process.env.NODE_ENV": `"${process.env.NODE_ENV}"`,
     },
