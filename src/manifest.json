@@ -6,6 +6,7 @@
   "host_permissions": ["http://*/*", "https://*/*", "<all_urls>"],
   "background": { "service_worker": "background.js" },
   "action": {
+    "default_title": "Pin Tweet to IPFS",
     "default_popup": "./Popup/popup.html",
     "default_icon": "icon-34.png"
   },
