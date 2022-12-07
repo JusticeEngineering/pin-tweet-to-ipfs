@@ -45,6 +45,17 @@ services.
    3. Click on `Load unpacked extension`
    4. Select the `build` folder.
 
+## Bookmarklet
+
+Basic functionality can be achieved in a bookmarklet
+
+```js
+javascript:(function(){
+  const url = document.location.href.match(/https:\/\/twitter.com\/(\w){1,15}\/status\/(\d)*/)[0];
+  if (url) window.open(`https://webrecorder.github.io/save-tweet-now/#url=${url}&autoupload=1`);
+})();
+```
+
 ## Resources
 
 - [Chrome Extension documentation](https://developer.chrome.com/extensions/getstarted)
