@@ -19,7 +19,7 @@ function onMutation (mutations) {
     } else {
       const selectedTweet = e.target.closest('article')
       tweetUrl = selectedTweet.querySelector(
-        '[data-testid="User-Names"] [role="link"][dir="auto"]'
+        '[data-testid="User-Names"] [role="link"][href*="status"]'
       )?.href
     }
 
