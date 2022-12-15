@@ -44,6 +44,9 @@ services.
    2. Check `Developer mode`
    3. Click on `Load unpacked extension`
    4. Select the `build` folder.
+   
+## Demo
+https://user-images.githubusercontent.com/1844554/207936773-4348a25e-a34f-4387-b805-f807fb0787d9.mp4
 
 ## Bookmarklet
 
