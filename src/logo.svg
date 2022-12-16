@@ -1,43 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 27.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 177.5 205" style="enable-background:new 0 0 177.5 205;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#459EA2;}
-	.st1{fill:#063B54;}
-	.st2{fill:none;stroke:#459EA2;stroke-width:20;stroke-linejoin:round;stroke-miterlimit:1.3333;}
-	.st3{fill:#FFFFFF;}
-	.st4{fill:none;stroke:#063B54;stroke-width:5.5675;stroke-linejoin:round;stroke-miterlimit:1.3333;}
-	.st5{fill:#429CD6;}
-	.st6{fill:#FFFFFF;stroke:#063B54;stroke-width:6;stroke-miterlimit:10;}
-	.st7{fill:#429CD6;stroke:#FFFFFF;stroke-width:3.8659;stroke-linecap:round;stroke-linejoin:round;}
-	.st8{fill:#70CDDD;stroke:#063B54;stroke-width:6;stroke-miterlimit:10;}
-	.st9{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-linecap:round;}
-	.st10{fill:none;stroke:#429CD6;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
-	.st11{fill:#063B54;stroke:#063B54;stroke-width:6;stroke-miterlimit:10;}
-	.st12{fill:none;stroke:#70CDDD;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
-	.st13{fill:none;stroke:#FFFFFF;stroke-width:24.1863;stroke-linecap:round;stroke-linejoin:round;}
-	.st14{fill:none;stroke:#063B54;stroke-width:5.0041;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st15{fill:#719AA1;}
-	.st16{fill:#263952;}
-	.st17{fill:none;stroke:#719AA1;stroke-width:5.5317;stroke-linejoin:round;stroke-miterlimit:1.3333;}
-	.st18{fill:none;stroke:#263952;stroke-width:1.5399;stroke-linejoin:round;stroke-miterlimit:1.3333;}
-	.st19{fill:#7398D0;}
-	.st20{fill:#FFFFFF;stroke:#263952;stroke-width:1.8324;stroke-miterlimit:10;}
-	.st21{fill:none;stroke:#7398D0;stroke-width:1.527;stroke-linecap:round;stroke-linejoin:round;}
-</style>
-<polygon class="st15" points="88.8,0 177.5,51.2 177.5,153.7 88.8,205 0,153.7 0,51.2 "/>
-<path class="st16" d="M88.8,0L0,51.2v102.5L88.8,205l88.8-51.2V51.2L88.8,0z M79.6,12.3L79.6,12.3c5.4,4,12.8,4,18.3,0l64.3,37.2
-	c-0.1,1.1-0.1,2.3,0,3.4L97.9,90.1c-5.4-4-12.8-4-18.3,0L15.2,52.9c0.1-1.1,0.1-2.3,0-3.4L79.6,12.3z M168.4,63.2
-	c0.9,0.7,1.9,1.3,3,1.7v74.3c-6.2,2.7-9.9,9.1-9.1,15.8l-64.4,37.2c-0.9-0.7-1.9-1.3-3-1.7l-0.1-73.9c6.2-2.7,9.9-9.1,9.1-15.8
-	L168.4,63.2z M9.1,63.6l64.4,37.2c-0.8,6.7,2.9,13.1,9.1,15.8v74.3c-1.1,0.5-2,1-3,1.7l-64.4-37.2c0.8-6.7-2.9-13.1-9.1-15.8V65.3
-	C7.2,64.9,8.2,64.3,9.1,63.6L9.1,63.6z"/>
-<circle style="fill:#FFFFFF;stroke:#263952;stroke-width:6;stroke-miterlimit:10;" cx="90.2" cy="101.4" r="52.8"/>
-<g>
-	<path class="st19" d="M72.8,125.2c8.2,0,15.9-2.2,22.5-6.1c0.9-0.5,0.8-1.8-0.1-2.3l-4.8-2.4c4.5,0,13.5-1.8,13.5-1.8
-		c9.6-9.4,14.5-22.9,13.3-36.2c-0.1-1.2-1.1-2.1-2.2-2.3c-6.9-0.7-14,0.3-20.5,2.8c0,0-2.2,5.2-2.7,7.7L89,81
-		c-0.4-0.6-1.2-0.7-1.8-0.4c-12.7,7.8-21.1,20.8-21.1,38.5"/>
-	<path style="fill:#7398D0;stroke:#FFFFFF;stroke-width:3.8659;stroke-linecap:round;stroke-linejoin:round;" d="M55.6,132.9
-		c6.7-18.2,28.3-34,45.8-42.8"/>
-</g>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 205 205" width="205" height="205">
+	<title>logo-svg</title>
+	<style>
+		.s0 { fill: #719aa1 } 
+		.s1 { fill: #263952 } 
+		.s2 { fill: #ffffff;stroke: #263952;stroke-width: 6 } 
+		.s3 { fill: #7398d0 } 
+		.s4 { fill: #7398d0;stroke: #ffffff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 3.9 } 
+	</style>
+	<path id="Layer" class="s0" d="m101.8 0l88.7 51.2v102.5l-88.7 51.3-88.8-51.3v-102.5z"/>
+	<path id="Layer" fill-rule="evenodd" class="s1" d="m190.6 51.2v102.6l-88.8 51.2-88.8-51.3v-102.5l88.8-51.2zm-162.4-1.7c0.1 1.1 0.1 2.3 0 3.4l64.4 37.2c5.5-4 12.9-4 18.3 0l64.3-37.2c-0.1-1.1-0.1-2.3 0-3.4l-64.3-37.2c-5.5 4-12.9 4-18.3 0zm88.7 51.3c0.8 6.7-2.9 13.1-9.1 15.8l0.1 73.9c1.1 0.4 2.1 1 3 1.7l64.4-37.2c-0.8-6.7 2.9-13.1 9.1-15.8v-74.3c-1.1-0.4-2.1-1-3-1.7zm-97.8-35.5v74.3c6.2 2.7 9.9 9.1 9.1 15.8l64.4 37.2c1-0.7 1.9-1.2 3-1.7v-74.3c-6.2-2.7-9.9-9.1-9.1-15.8l-64.4-37.2c-0.9 0.7-1.9 1.3-3 1.7z"/>
+	<path id="Layer" class="s2" d="m103.2 154.2c-29.2 0-52.8-23.6-52.8-52.8 0-29.2 23.6-52.8 52.8-52.8 29.2 0 52.8 23.6 52.8 52.8 0 29.2-23.6 52.8-52.8 52.8z"/>
+	<g id="Layer">
+		<path id="Layer" class="s3" d="m79.1 119.1c0-17.7 8.4-30.7 21.1-38.5 0.6-0.3 1.4-0.2 1.8 0.4l2.8 3.6c0.5-2.5 2.7-7.7 2.7-7.7 6.5-2.5 13.6-3.5 20.5-2.8 1.1 0.2 2.1 1.1 2.2 2.3 1.2 13.3-3.7 26.8-13.3 36.2 0 0-9 1.8-13.5 1.8l4.8 2.4c0.9 0.5 1 1.8 0.1 2.3-6.6 3.9-14.3 6.1-22.5 6.1"/>
+		<path id="Layer" class="s4" d="m68.6 132.9c6.7-18.2 28.3-34 45.8-42.8"/>
+	</g>
 </svg>
