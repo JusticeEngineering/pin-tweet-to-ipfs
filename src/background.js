@@ -45,6 +45,15 @@ function archiveTweet (url) {
   )
 }
 
+chrome.contextMenus.create({
+  title: 'Pin Tweet to IPFS',
+  contexts: ['link'],
+  id: 'pin-tweet-to-ipfs',
+  targetUrlPatterns: ['https://twitter.com/*/status/*']
+})
+
+chrome.contextMenus.onClicked.addListener((info) => archiveTweet(info.linkUrl))
+
 chrome.runtime.onMessage.addListener((msg) => {
   if (msg.url) archiveTweet(msg.url)
 })
