@@ -1,4 +1,4 @@
-/* global chrome, MutationObserver */
+/* global chrome, MutationObserver, DOMParser */
 import iconLogo from './logo.svg'
 
 const observer = new MutationObserver(onMutation)
