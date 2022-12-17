@@ -13,6 +13,7 @@ zip -r ../extension \
     "Popup/index.css" \
     "Popup/index.js" \
     "Popup/popup.html" \
+    "icon-16.png" \
     "icon-34.png" \
     "icon-128.png" \
     "LICENSE"
