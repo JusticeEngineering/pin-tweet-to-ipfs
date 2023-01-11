@@ -62,6 +62,7 @@ javascript:(function(){
 ## Resources
 
 - [Chrome Extension documentation](https://developer.chrome.com/extensions/getstarted)
+- [save-tweet-now website repo](https://github.com/webrecorder/save-tweet-now)
 
 ## Credits
 
