@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "pin-tweet-to-ipfs",
-  "description": "Pin tweets to ipfs",
+  "name": "Pin Tweet to IPFS",
+  "description": "An extension to help you pin tweets to IPFS, allowing users store tweets for archival purposes.",
   "permissions": ["tabs", "storage", "scripting", "contextMenus"],
   "host_permissions": ["http://*/*", "https://*/*", "<all_urls>"],
   "background": { "service_worker": "background.js" },
