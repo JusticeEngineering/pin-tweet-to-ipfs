@@ -26,7 +26,7 @@ Pin Tweet to IPFS is a [web extension](https://developer.mozilla.org/en-US/docs/
 
 ## How does it work?
 
-We are using a new tool, ["save tweet now"](https://webrecorder.github.io/save-tweet-now) from the [WebRecorder](https://webrecorder.net/) team to create verifiable[WebArChiveZip](https://specs.webrecorder.net/wacz/1.1.1/) files of tweets. We then assist the user in uploading these "WACZ" files to the IPFS network via [web3.storage](https://web3.storage). Here users can store all of their archived tweets in one place, and easily access them via their own IPFS node or other pinning services.
+We are using a new tool, ["save tweet now"](https://webrecorder.github.io/save-tweet-now) from the [WebRecorder](https://webrecorder.net/) team to create a verifiable [WebArChiveZip](https://specs.webrecorder.net/wacz/1.1.1/) files of tweets. We then assist the user in uploading these "WACZ" files to the IPFS network via [web3.storage](https://web3.storage). Here users can store all of their archived tweets in one place, and easily access them via their own IPFS node or other pinning services.
 
 ## Installing and Running
 
