@@ -37,7 +37,7 @@ function archiveTweet (url) {
             cid
           }
           chrome.storage.sync.set(listing, () => {
-            console.log('Tweet saved in extension storage, ', listing)
+            console.log('[pin-tweet-to-ipfs] Tweet saved in extension storage, ', listing)
           })
         }
       })
@@ -45,15 +45,25 @@ function archiveTweet (url) {
   )
 }
 
-chrome.contextMenus.create({
-  title: 'Pin Tweet to IPFS',
-  contexts: ['link'],
-  id: 'pin-tweet-to-ipfs',
-  targetUrlPatterns: ['https://twitter.com/*/status/*']
-})
+function init () {
+  // setup contextMenu handling
+  chrome.contextMenus.create({
+    title: 'Pin Tweet to IPFS',
+    contexts: ['link'],
+    id: `pin-tweet-to-ipfs-${new Date().toISOString()}`, // unique id to avoid errors
+    targetUrlPatterns: ['https://twitter.com/*/status/*']
+  })
 
-chrome.contextMenus.onClicked.addListener((info) => archiveTweet(info.linkUrl))
+  chrome.contextMenus.onClicked.addListener((info) => archiveTweet(info.linkUrl))
 
-chrome.runtime.onMessage.addListener((msg) => {
-  if (msg.url) archiveTweet(msg.url)
-})
+  // add global listener
+  chrome.runtime.onMessage.addListener((msg) => {
+    if (msg.url) archiveTweet(msg.url)
+  })
+}
+
+try {
+  init()
+} catch (err) {
+  console.error('[pin-tweet-to-ipfs] Failed to init in background.js', err)
+}
