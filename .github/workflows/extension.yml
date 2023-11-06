@@ -11,7 +11,7 @@ jobs:
     env:
       APP_ID: bkbejdaeamaehgpodkjdbkhkofpijagn
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: install node v19
         uses: actions/setup-node@v3
         with:
