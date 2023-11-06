@@ -39,7 +39,7 @@ jobs:
           apiClientSecret: ${{ secrets.CLIENT_SECRET }}
           apiRefreshToken: ${{ secrets.REFRESH_TOKEN }}
       - name: Deploy to Edge Addons
-        uses: wdzeng/edge-addon@v1.0.3
+        uses: wdzeng/edge-addon@v1.2.2
         with:
           product-id: ${{ secrets.EDGE_PRODUCT_ID }}
           zip-path: './extension.zip'
