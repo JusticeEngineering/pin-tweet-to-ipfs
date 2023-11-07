@@ -11,11 +11,11 @@ jobs:
     env:
       APP_ID: bkbejdaeamaehgpodkjdbkhkofpijagn
     steps:
-      - uses: actions/checkout@v3
-      - name: install node v19
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - name: install node v20
+        uses: actions/setup-node@v4
         with:
-          node-version: 19
+          node-version: 20
       - run: npm ci
       - run: npm run build
       - run: npm run bundle
@@ -39,7 +39,7 @@ jobs:
           apiClientSecret: ${{ secrets.CLIENT_SECRET }}
           apiRefreshToken: ${{ secrets.REFRESH_TOKEN }}
       - name: Deploy to Edge Addons
-        uses: wdzeng/edge-addon@v1.0.3
+        uses: wdzeng/edge-addon@v1.2.2
         with:
           product-id: ${{ secrets.EDGE_PRODUCT_ID }}
           zip-path: './extension.zip'
