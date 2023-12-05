@@ -20,18 +20,18 @@
     "standard": "17.1.0"
   },
   "devDependencies": {
-    "@types/chrome": "0.0.250",
-    "@types/react": "18.2.36",
-    "@types/react-dom": "18.2.15",
-    "@typescript-eslint/eslint-plugin": "6.10.0",
-    "@typescript-eslint/parser": "6.10.0",
+    "@types/chrome": "0.0.253",
+    "@types/react": "18.2.42",
+    "@types/react-dom": "18.2.17",
+    "@typescript-eslint/eslint-plugin": "6.13.2",
+    "@typescript-eslint/parser": "6.13.2",
     "cpy": "11.0.0",
     "del": "7.1.0",
-    "esbuild": "0.19.5",
+    "esbuild": "0.19.8",
     "esbuild-plugin-svg": "0.1.0",
-    "eslint": "8.53.0",
+    "eslint": "8.55.0",
     "eslint-plugin-react": "7.33.2",
-    "typescript": "5.2.2"
+    "typescript": "5.3.2"
   },
   "eslintIgnore": [
     "/build/**",
