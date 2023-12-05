@@ -53,6 +53,7 @@ function onMutation (mutations) {
     pinTweetButton.style.cursor = 'pointer'
     pinTweetButton.style.minWidth = '165px'
     pinTweetButton.addEventListener('click', (e) => getTweetUrl(e))
+    pinTweetButton.id = `pin-tweet-${new Date().toISOString()}`
     return pinTweetButton
   }
 
@@ -86,6 +87,7 @@ function onMutation (mutations) {
   }
 
   found.forEach((n) => {
+    if (n.querySelector("[id^='pin-tweet']")) return // return early if there is already a button appended
     n.appendChild(createButton())
   })
 }
