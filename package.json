@@ -27,7 +27,7 @@
     "@typescript-eslint/parser": "6.13.2",
     "cpy": "11.0.0",
     "del": "7.1.0",
-    "esbuild": "0.19.8",
+    "esbuild": "0.20.1",
     "esbuild-plugin-svg": "0.1.0",
     "eslint": "8.55.0",
     "eslint-plugin-react": "7.33.2",
