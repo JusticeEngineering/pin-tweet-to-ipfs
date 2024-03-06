@@ -22,7 +22,7 @@
   "devDependencies": {
     "@types/chrome": "0.0.254",
     "@types/react": "18.2.42",
-    "@types/react-dom": "18.2.17",
+    "@types/react-dom": "18.2.20",
     "@typescript-eslint/eslint-plugin": "6.13.2",
     "@typescript-eslint/parser": "6.13.2",
     "cpy": "11.0.0",
